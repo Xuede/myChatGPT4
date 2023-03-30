@@ -7,7 +7,7 @@ header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 
 // Replace YOUR_API_KEY with your actual GPTChat API key
-define('API_KEY', 'YOUR_API_KEY');
+define('API_KEY', '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');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $input = json_decode(file_get_contents('php://input'), true);

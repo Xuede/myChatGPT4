@@ -7,13 +7,13 @@ header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 
 // Replace YOUR_API_KEY with your actual GPTChat API key
-define('API_KEY', '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');
+define('API_KEY', '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');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $input = json_decode(file_get_contents('php://input'), true);
     $message = urlencode($input['message']);
 
-    $url = "https://api.gptchat.com/v1/engines/gpt-4/complete?api_key=" . API_KEY . "&message=" . $message;
+    $url = "https://api.gptchat.com/v1/engines/gpt3.5-turbo/complete?api_key=" . API_KEY . "&message=" . $message;
 
     $response = file_get_contents($url);
     echo $response;
